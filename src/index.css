@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: 79 70 229; /* Indigo-600 */
+  }
+
+  .dark {
+    --primary: 99 102 241; /* Indigo-500 */
+  }
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+@layer components {
+  .input-field {
+    @apply w-full px-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:placeholder-gray-400;
+  }
+
+  .btn-primary {
+    @apply px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .section-title {
+    @apply text-lg font-semibold mb-3 dark:text-white;
+  }
+}
